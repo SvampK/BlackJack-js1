@@ -54,15 +54,25 @@ let cards = [
 
 ];
 let deck = [];
+let dealer = [];
+let player = [];
 let outputArea = document.getElementById("output-area");
 
 function shuffleDeck() {
     let tmpDeck = cards.slice(0);
    
     while( tmpDeck.length > 0){
-        let randomNum = Math.floor(Math.randan() * (tmpDeck.length));
+        let randomNum = Math.floor(Math.random() * (tmpDeck.length));
         let card = tmpDeck.splice(randomNum, 1);
         deck.push(...card);
-        
     }
 }
+
+function drawCard() {
+    return console.log(deck.shift());
+}
+function showHand(hand, score) {
+    
+}
+shuffleDeck();
+drawCard();
